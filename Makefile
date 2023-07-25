@@ -13,20 +13,25 @@ SOURCES = \
 # The following refers to the tests
 
 TEST_SOURCES = \
-	./tests/main.test.c \
-	./tests/ft_isalpha.test.c \
-	./tests/ft_isdigit.test.c \
-	./tests/ft_isalnum.test.c \
-	./tests/ft_isascii.test.c \
-	./tests/ft_isprint.test.c
+	./tests/test_main.c \
+	./tests/test_ft_isalpha.c \
+	./tests/test_ft_isdigit.c \
+	./tests/test_ft_isalnum.c \
+	./tests/test_ft_isascii.c \
+	./tests/test_ft_isprint.c
 
-TEST_HEADERS_DIR = ./tests/includes
+add:
+	@read -p "Enter File Name: " name; \
+	touch ./src/ft_$${name}.c; \
+	touch ./tests/test_$${name}.c; \
+	sed -E "s/(\/\/ add assert)/\tassert(test_ft_$${name}());\n\1/" ./tests/main.test.c \ 
+	sed -E "s/(\/\/ add prototype)/int\ttest_ft_$${name}();\n\1/" ./tests/main.test.c 
 
 test:
 	@printf 'Running norminette...\n'
 	@norminette ./src
 	@echo "\nCompiling tests..."
-	@$(CC) $(CFLAGS) -o test.out $(TEST_SOURCES) $(SOURCES)
+	@$(CC) $(CFLAGS) -o test.out $(TEST_SOURCES) $(SOURCES) -I./src
 	@echo "Running tests...\n"
 	@./test.out
 	@rm -f test.out
