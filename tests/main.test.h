@@ -4,5 +4,7 @@
 
 char*	ft_isalpha_all_tests();
 char*   ft_isdigit_all_tests();
+char*	ft_isalnum_all_tests();
+char*	ft_isascii_all_tests();
 
 #endif
