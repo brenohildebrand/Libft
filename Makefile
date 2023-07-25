@@ -5,7 +5,8 @@ SOURCES = \
 	./src/ft_isalpha.c \
 	./src/ft_isdigit.c \
 	./src/ft_isalnum.c \
-	./src/ft_isascii.c
+	./src/ft_isascii.c \
+	./src/ft_isprint.c
 
 # Cut here
 
@@ -16,7 +17,8 @@ TEST_SOURCES = \
 	./tests/ft_isalpha.test.c \
 	./tests/ft_isdigit.test.c \
 	./tests/ft_isalnum.test.c \
-	./tests/ft_isascii.test.c 
+	./tests/ft_isascii.test.c \
+	./tests/ft_isprint.test.c
 
 TEST_HEADERS_DIR = ./tests/includes
 

@@ -24,6 +24,7 @@ int	main(void)
 	run("isdigit: ", ft_isdigit_all_tests);
 	run("isalnum: ", ft_isalnum_all_tests);
 	run("isascii: ", ft_isascii_all_tests);
+	run("isprint: ", ft_isprint_all_tests);
 	printf("%d tests in total.\n", tests_run);
 	return (0);
 }
