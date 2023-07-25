@@ -6,7 +6,8 @@ SOURCES = \
 	./src/ft_isdigit.c \
 	./src/ft_isalnum.c \
 	./src/ft_isascii.c \
-	./src/ft_isprint.c
+	./src/ft_isprint.c \
+	./src/ft_strlen.c
 
 # Cut here
 
@@ -18,7 +19,8 @@ TEST_SOURCES = \
 	./tests/test_ft_isdigit.c \
 	./tests/test_ft_isalnum.c \
 	./tests/test_ft_isascii.c \
-	./tests/test_ft_isprint.c
+	./tests/test_ft_isprint.c \
+	./tests/test_ft_strlen.c
 
 add:
 	@read -p "Enter File Name: " name; \
