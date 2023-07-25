@@ -5,6 +5,8 @@ SOURCES = \
 	./src/ft_isalpha.c \
 	./src/ft_isdigit.c
 
+# Cut here
+
 # The following refers to the tests
 
 TEST_SOURCES = \
@@ -15,7 +17,7 @@ TEST_SOURCES = \
 TEST_HEADERS_DIR = ./tests/includes
 
 test:
-	@echo "Running norminette...\n"
+	@printf 'Running norminette...\n'
 	@norminette ./src
 	@echo "\nCompiling tests..."
 	@$(CC) $(CFLAGS) -o test.out $(TEST_SOURCES) $(SOURCES)
@@ -26,3 +28,9 @@ test:
 # The following refers to the build
 
 build:
+	@printf 'Building...\n'
+	@mkdir -p build
+	@cp -r ./src/* ./build
+	@printf 'Generating Makefile...\n'
+	@sed -n '/# Cut here/q;p' Makefile > ./build/Makefile
+	@printf 'Done!\n'
