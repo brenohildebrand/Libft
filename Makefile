@@ -14,7 +14,12 @@ SOURCES = \
 	./src/ft_strlcpy.c \
 	./src/ft_strlcat.c \
 	./src/ft_toupper.c \
-	./src/ft_tolower.c
+	./src/ft_tolower.c \
+	./src/ft_strchr.c \
+	./src/ft_strrchr.c \
+	./src/ft_strncmp.c \
+	./src/ft_memchr.c \
+	./src/ft_memcmp.c
 
 # Cut here
 
@@ -34,7 +39,12 @@ TEST_SOURCES = \
 	./tests/test_ft_strlcpy.c \
 	./tests/test_ft_strlcat.c \
 	./tests/test_ft_toupper.c \
-	./tests/test_ft_tolower.c
+	./tests/test_ft_tolower.c \
+	./tests/test_ft_strchr.c \
+	./tests/test_ft_strrchr.c \
+	./tests/test_ft_strncmp.c \
+	./tests/test_ft_memchr.c \
+	./tests/test_ft_memcmp.c
 
 add:
 	@read -p "Enter File Name: " name; \

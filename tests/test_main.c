@@ -15,6 +15,11 @@ void	test_ft_strlcpy();
 void	test_ft_strlcat();
 void	test_ft_toupper();
 void	test_ft_tolower();
+void	test_ft_strchr();
+void	test_ft_strrchr();
+void	test_ft_strncmp();
+void	test_ft_memchr();
+void	test_ft_memcmp();
 // add prototype
 
 int main()
@@ -32,6 +37,11 @@ int main()
 	test_ft_strlcat();
 	test_ft_toupper();
 	test_ft_tolower();
+	test_ft_strchr();
+	test_ft_strrchr();
+	test_ft_strncmp();
+	test_ft_memchr();
+	test_ft_memcmp();
 	// add assert
 	printf("\x1b[38;2;0;255;0mAll tests passed.\x1b[0m\n");
 	return (0);
