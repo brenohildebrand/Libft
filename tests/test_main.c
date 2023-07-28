@@ -20,6 +20,10 @@ void	test_ft_strrchr();
 void	test_ft_strncmp();
 void	test_ft_memchr();
 void	test_ft_memcmp();
+void	test_ft_strnstr();
+void	test_ft_atoi();
+void	test_ft_calloc();
+void	test_ft_strdup();
 // add prototype
 
 int main()
@@ -42,7 +46,11 @@ int main()
 	test_ft_strncmp();
 	test_ft_memchr();
 	test_ft_memcmp();
+	test_ft_strnstr();
+	test_ft_atoi();
+	test_ft_calloc();
+	test_ft_strdup();
 	// add assert
-	printf("\x1b[38;2;0;255;0mAll tests passed.\x1b[0m\n");
+	printf("\x1b[38;2;103;228;128mAll tests passed.\x1b[0m\n");
 	return (0);
 }

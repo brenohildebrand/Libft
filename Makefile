@@ -19,7 +19,11 @@ SOURCES = \
 	./src/ft_strrchr.c \
 	./src/ft_strncmp.c \
 	./src/ft_memchr.c \
-	./src/ft_memcmp.c
+	./src/ft_memcmp.c \
+	./src/ft_strnstr.c \
+	./src/ft_atoi.c \
+	./src/ft_calloc.c \
+	./src/ft_strdup.c
 
 # Cut here
 
@@ -44,7 +48,11 @@ TEST_SOURCES = \
 	./tests/test_ft_strrchr.c \
 	./tests/test_ft_strncmp.c \
 	./tests/test_ft_memchr.c \
-	./tests/test_ft_memcmp.c
+	./tests/test_ft_memcmp.c \
+	./tests/test_ft_strnstr.c \
+	./tests/test_ft_atoi.c \
+	./tests/test_ft_calloc.c \
+	./tests/test_ft_strdup.c
 
 add:
 	@read -p "Enter File Name: " name; \

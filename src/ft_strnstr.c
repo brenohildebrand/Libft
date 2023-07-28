@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:06:58 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/27 13:27:12 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/07/27 15:58:59 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 {
 	unsigned int	big_index;
 	unsigned int	little_index;
-	char*			first_ocurrence;
+	char			*first_ocurrence;
 
 	big_index = 0;
 	little_index = 0;
@@ -28,14 +28,19 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	{
 		if (big[big_index + little_index] == little[little_index])
 		{	
+			first_ocurrence = (char *)&big[big_index];
 			while (little[little_index] != 0)
 			{
 				if (big[big_index + little_index] != little[little_index])
-					break;
+					break ;
 				little_index++;
 			}
+			if (little[little_index] == 0)
+				return (first_ocurrence);
+			else
+				little_index = 0;
 		}
-
 		big_index++;
 	}
+	return (0);
 }
