@@ -23,7 +23,17 @@ SOURCES = \
 	./src/ft_strnstr.c \
 	./src/ft_atoi.c \
 	./src/ft_calloc.c \
-	./src/ft_strdup.c
+	./src/ft_strdup.c \
+	./src/ft_substr.c \
+	./src/ft_strjoin.c \
+	./src/ft_strtrim.c \
+	./src/ft_split.c \
+	./src/ft_itoa.c \
+	./src/ft_strmapi.c \
+	./src/ft_putchar_fd.c \
+	./src/ft_putstr_fd.c \
+	./src/ft_putendl_fd.c \
+	./src/ft_putnbr_fd.c
 
 # Cut here
 
@@ -52,7 +62,17 @@ TEST_SOURCES = \
 	./tests/test_ft_strnstr.c \
 	./tests/test_ft_atoi.c \
 	./tests/test_ft_calloc.c \
-	./tests/test_ft_strdup.c
+	./tests/test_ft_strdup.c \
+	./tests/test_ft_substr.c \
+	./tests/test_ft_strjoin.c \
+	./tests/test_ft_strtrim.c \
+	./tests/test_ft_split.c \
+	./tests/test_ft_itoa.c \
+	./tests/test_ft_strmapi.c \
+	./tests/test_ft_putchar_fd.c \
+	./tests/test_ft_putstr_fd.c \
+	./tests/test_ft_putendl_fd.c \
+	./tests/test_ft_putnbr_fd.c
 
 add:
 	@read -p "Enter File Name: " name; \

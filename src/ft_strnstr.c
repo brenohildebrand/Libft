@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	while (big_index < len)
 	{
 		if (big[big_index + little_index] == little[little_index])
-		{	
+		{
 			first_ocurrence = (char *)&big[big_index];
 			while (little[little_index] != 0)
 			{
