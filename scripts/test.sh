@@ -4,24 +4,25 @@
 # This script run the test for the given function.
 # Ex: ./scripts/test.sh strlen
 
+# Check if argument was given
 if [ $# -lt 1 ]; then
     echo "Error: Missing argument. Please provide a function name."
     exit 1
 fi
 
-# check if function exists
-if [ ! -f "./src/${1}.c" ]; then
-    echo "Error: File ${1}.c does not exist."
+# Compile libft.a
+echo -n "Compiling libft.a..."
+gcc -Wall -Wextra -Werror -c ./src/*.c
+if [ $? -ne 0 ]; then
+    echo -e "\x1b[38;2;255;0;0mLibft does not compile.\x1b[0m"
     exit 0
+else
+    echo -e " Done!"
 fi
+ar -rc libft.a *.o
+rm *.o
 
-# check if test function exists
-if [ ! -f "./tests/test_${1}.c" ]; then
-    echo "Error: Test file test_${1} does not exist."
-    exit 0
-fi
-
-# create a temp file with a main function
+# Create a temp file with a main function
 cat << EOF > "tmp.c"
 #include <stdio.h>
 
@@ -35,8 +36,8 @@ int main(void)
 }
 EOF
 
-# compile the temp file with the test file and src file and libft.h
-gcc -Wall -Wextra -Werror ./tests/test_${1}.c ./src/${1}.c tmp.c -I./src
+# Compile the libft.a + temp file + test file
+gcc -Wall -Wextra -Werror ./tests/test_${1}.c tmp.c -I./src -L. -lft
 
 if [ $? -ne 0 ]; then
     echo -e "\x1b[38;2;255;0;0mDoes not compile.\x1b[0m"
@@ -47,6 +48,7 @@ fi
 # run the executable
 ./a.out
 
+echo -n "Result: "
 if [ $? -ne 0 ]; then
     echo -e "\x1b[38;2;255;0;0mKO\x1b[0m"
 else
@@ -58,3 +60,6 @@ rm a.out
 
 # remove the temp file
 rm tmp.c
+
+# remove the libft.a
+rm libft.a

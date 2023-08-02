@@ -6,13 +6,13 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:33:35 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/26 16:47:39 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/02 19:04:46 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {
-	int	index;
+	unsigned int	index;
 
 	index = 0;
 	if ((char *)dest < (char *)src)
