@@ -1,4 +1,4 @@
-#/bin/bash
+#/bin/sh
 
 # test.sh
 # This script run the test for the given function.
@@ -11,16 +11,12 @@ if [ $# -lt 1 ]; then
 fi
 
 # Compile libft.a
-echo -n "Compiling libft.a..."
-gcc -Wall -Wextra -Werror -c ./src/*.c
+cd ./src
+make --silent
 if [ $? -ne 0 ]; then
-    echo -e "\x1b[38;2;255;0;0mLibft does not compile.\x1b[0m"
-    exit 0
-else
-    echo -e " Done!"
+    exit 1
 fi
-ar -rc libft.a *.o
-rm *.o
+cd ..
 
 # Create a temp file with a main function
 cat << EOF > "tmp.c"
@@ -37,7 +33,7 @@ int main(void)
 EOF
 
 # Compile the libft.a + temp file + test file
-gcc -Wall -Wextra -Werror ./tests/test_${1}.c tmp.c -I./src -L. -lft
+gcc -Wall -Wextra -Werror ./tests/test_${1}.c tmp.c -I./src -L./src -lft
 
 if [ $? -ne 0 ]; then
     echo -e "\x1b[38;2;255;0;0mDoes not compile.\x1b[0m"
@@ -48,7 +44,6 @@ fi
 # run the executable
 ./a.out
 
-echo -n "Result: "
 if [ $? -ne 0 ]; then
     echo -e "\x1b[38;2;255;0;0mKO\x1b[0m"
 else
@@ -60,6 +55,3 @@ rm a.out
 
 # remove the temp file
 rm tmp.c
-
-# remove the libft.a
-rm libft.a
