@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 02:22:56 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/03 02:22:56 by bhildebr         ###   ########.fr       */
+/*   Created: 2023/08/02 20:35:07 by bhildebr          #+#    #+#             */
+/*   Updated: 2023/08/02 20:35:07 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+void    ft_putnbr_fd(int n, int fd)
 {
-    char    *substr;
-    int     i;
-
-    i = 0;
-    substr = (char *)malloc((len + 1) * sizeof(char));
-    while (i < len)
+    if (n < 0)
     {
-        substr[i] = s[start + i];
-        i++;
+        write(fd, "-", 1);
+        n *= -1;
     }
-    substr[len] = '\0';
-    return (substr);
+    if (n >= 10)
+    {
+        ft_putnbr_fd(num / 10, fd);
+    }
+    write(fd, (n % 10) + '0', 1);
 }

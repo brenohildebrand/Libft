@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 02:22:56 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/03 02:22:56 by bhildebr         ###   ########.fr       */
+/*   Created: 2023/08/02 21:17:43 by bhildebr          #+#    #+#             */
+/*   Updated: 2023/08/02 21:17:43 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+void    ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    char    *substr;
-    int     i;
+    int i;
 
-    i = 0;
-    substr = (char *)malloc((len + 1) * sizeof(char));
-    while (i < len)
+    if(s == NULL)
+        return ;
+    while (s[i])
     {
-        substr[i] = s[start + i];
+        f(i, &s[i]);
         i++;
     }
-    substr[len] = '\0';
-    return (substr);
 }

@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 02:22:56 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/03 02:22:56 by bhildebr         ###   ########.fr       */
+/*   Created: 2023/08/02 20:33:58 by bhildebr          #+#    #+#             */
+/*   Updated: 2023/08/02 20:33:58 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+void    ft_putendl_fd(char *s, int fd)
 {
-    char    *substr;
-    int     i;
-
-    i = 0;
-    substr = (char *)malloc((len + 1) * sizeof(char));
-    while (i < len)
+    while (s)
     {
-        substr[i] = s[start + i];
-        i++;
+        write(fd, s, 1);
+        s++;
     }
-    substr[len] = '\0';
-    return (substr);
+    write(fd, "\n", 1);
 }

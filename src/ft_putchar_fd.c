@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 02:22:56 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/03 02:22:56 by bhildebr         ###   ########.fr       */
+/*   Created: 2023/08/02 20:19:42 by bhildebr          #+#    #+#             */
+/*   Updated: 2023/08/02 20:19:42 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+void    ft_putchar_fd(char c, int fd)
 {
-    char    *substr;
-    int     i;
-
-    i = 0;
-    substr = (char *)malloc((len + 1) * sizeof(char));
-    while (i < len)
-    {
-        substr[i] = s[start + i];
-        i++;
-    }
-    substr[len] = '\0';
-    return (substr);
+    write(fd, &c, 1);
 }
