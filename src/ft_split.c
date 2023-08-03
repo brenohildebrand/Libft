@@ -90,6 +90,7 @@ int main()
     char    **arr;
 
     arr = ft_split("hello world again", ' ');
+    i = 0;
     while (arr[i])
     {
         j = 0;

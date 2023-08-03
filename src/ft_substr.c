@@ -12,10 +12,10 @@
 
 #include <stdlib.h>
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char    *ft_substr(char const *s, unsigned int start, unsigned int len)
 {
-    char    *substr;
-    int     i;
+    char            *substr;
+    unsigned int    i;
 
     i = 0;
     substr = (char *)malloc((len + 1) * sizeof(char));
