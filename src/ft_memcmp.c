@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 12:28:49 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/27 12:40:44 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/04 22:06:39 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 	unsigned char	*str1;
 	unsigned char	*str2;
 
+	if (n <= 0)
+		return (0);
+	if (s1 == 0 || s2 == 0)
+		return (0);
 	index = 0;
 	str1 = (unsigned char *)(s1);
 	str2 = (unsigned char *)(s2);

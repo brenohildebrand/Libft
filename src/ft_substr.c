@@ -12,18 +12,18 @@
 
 #include <stdlib.h>
 
-char    *ft_substr(char const *s, unsigned int start, unsigned int len)
+char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 {
-    char            *substr;
-    unsigned int    i;
+	char			*substr;
+	unsigned int	i;
 
-    i = 0;
-    substr = (char *)malloc((len + 1) * sizeof(char));
-    while (i < len)
-    {
-        substr[i] = s[start + i];
-        i++;
-    }
-    substr[len] = '\0';
-    return (substr);
+	i = 0;
+	substr = (char *)malloc((len + 1) * sizeof(char));
+	while (i < len)
+	{
+		substr[i] = s[start + i];
+		i++;
+	}
+	substr[len] = '\0';
+	return (substr);
 }

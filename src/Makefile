@@ -80,9 +80,9 @@ all:
 	ar -rc $(NAME) $(OBJECTS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJECTS)
 
-fclen: clean
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

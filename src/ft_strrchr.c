@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:49:34 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/27 11:57:15 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/04 22:58:05 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strrchr(const char*s, int c)
 	int		index;
 	char	*last_ocurrence;
 
+	if (s == 0)
+		return (0);
 	index = 0;
 	last_ocurrence = 0;
 	while (s[index])
@@ -26,5 +28,7 @@ char	*ft_strrchr(const char*s, int c)
 			last_ocurrence = (char *)(s + index);
 		index++;
 	}
+	if (c == '\0')
+		return ((char *)(s + index));
 	return (last_ocurrence);
 }

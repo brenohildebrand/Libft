@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:59:40 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/27 12:07:13 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/04 22:31:12 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,21 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	unsigned int	index;
 
 	index = 0;
+	if (s1 == 0 || s2 == 0 || n <= 0)
+		return (0);
 	while (index < n)
 	{
-		if (s1[index] != s2[index])
+		if ((unsigned char)(s1[index]) != (unsigned char)(s2[index]))
 		{
-			if (s1[index] > s2[index])
+			if ((unsigned char)(s1[index]) > (unsigned char)(s2[index]))
 				return (1);
 			else
 				return (-1);
 		}
 		else
 		{
-			if (s1[index] == 0 && s2[index] == 0)
+			if ((unsigned char)(s1[index]) == 0 && \
+				(unsigned char)(s2[index]) == 0)
 				return (0);
 			index++;
 		}
