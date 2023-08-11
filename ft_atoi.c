@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 14:29:31 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/02 17:47:02 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:50:02 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,16 @@
 
 static int	ft_isspace(char c)
 {
-	if (\
-		c == '\f' || \
-		c == '\n' || \
-		c == '\r' || \
-		c == '\t' || \
-		c == '\v' || \
-		c == ' '\
-	)
+	if ((c >= '\t' && c <= '\r') || c == ' ')
 		return (1);
 	return (0);
 }
 
 int	ft_atoi(const char *nptr)
 {
-	int				index;
-	int				signal;
-	long long int	nb;
+	int	index;
+	int	signal;
+	int	nb;
 
 	index = 0;
 	while (ft_isspace(nptr[index]))
@@ -47,5 +40,5 @@ int	ft_atoi(const char *nptr)
 		nb += nptr[index] - '0';
 		index++;
 	}
-	return ((int)(nb * signal));
+	return (nb * signal);
 }

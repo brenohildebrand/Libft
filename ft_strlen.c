@@ -6,13 +6,13 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 16:45:01 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/25 16:58:08 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 16:20:47 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
+unsigned long	ft_strlen(const char *s)
 {
-	unsigned int	len;
+	unsigned long	len;
 
 	len = 0;
 	while (*(s + len))

@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:59:40 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/04 22:31:12 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 17:17:56 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 // The strncmp() function is similar, except it compares only the first 
 // (at most) n bytes of s1 and s2.
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned long n)
 {
-	unsigned int	index;
+	unsigned long	index;
 
 	index = 0;
-	if (s1 == 0 || s2 == 0 || n <= 0)
+	if (s1 == 0 && s2 == 0)
 		return (0);
 	while (index < n)
 	{

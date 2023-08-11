@@ -39,10 +39,10 @@ static int	get_number_of_tokens(char const *s, char c)
 
 static void	get_tokens_logic(char const *s, char c, char ***tokens)
 {
-	unsigned int	i;
-	unsigned int	count;
-	unsigned int	start;
-	unsigned int	end;
+	unsigned long	i;
+	unsigned long	count;
+	unsigned long	start;
+	unsigned long	end;
 
 	i = 0;
 	count = 0;

@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:55:40 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/04 22:54:10 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 17:14:53 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 // The strlcpy() function copies up to size - 1 characters from the 
 // NUL-terminated string src to dst, NUL-terminating the result.
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long size)
 {
-	unsigned int	index;
+	unsigned long	index;
 
-	if (dst == 0 || src == 0)
-		return (0);
 	if (size > 0)
 	{
 		index = 0;

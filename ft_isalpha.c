@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 18:10:00 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/09 03:27:30 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 16:05:29 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,17 @@
 // additional characters forwhich isalpha() is true—letters which are neither 
 // uppercase nor lowercase.
 
+static int	ft_islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+
+static int	ft_isupper(int c)
+{
+	return (c >= 'A' && c <= 'Z');
+}
+
 int	ft_isalpha(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+	return (ft_islower(c) || ft_isupper(c));
 }

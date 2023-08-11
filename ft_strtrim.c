@@ -16,14 +16,12 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	s_len;
+	unsigned long	s_len;
 
-	if (s1 == 0 || set == 0)
-		return (0);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	s_len = ft_strlen(s1);
-	while (s_len && ft_strchr(set, s1[s_len - 1]))
+	while ((s_len - 1) && ft_strchr(set, s1[s_len - 1]))
 		s_len--;
 	return (ft_substr(s1, 0, s_len));
 }

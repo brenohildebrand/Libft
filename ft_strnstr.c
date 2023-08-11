@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:06:58 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/09 03:05:49 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 17:19:39 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, unsigned long len)
 {
-	unsigned int	big_index;
-	unsigned int	little_index;
+	unsigned long	big_index;
+	unsigned long	little_index;
 
-	if (little == 0 || little[0] == '\0')
+	if (little[0] == '\0')
 		return ((char *)big);
 	if (len > ft_strlen(big))
 		len = ft_strlen(big);

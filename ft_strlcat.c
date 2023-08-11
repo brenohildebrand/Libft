@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:56:35 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/04 23:08:43 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 17:12:17 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 // dst.  It will append at most size - strlen(dst) - 1 bytes, NUL-terminating 
 // the result.
 
-unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
+unsigned long	ft_strlcat(char *dst, const char *src, unsigned long size)
 {
-	unsigned int	index;
-	unsigned int	dst_len;
+	unsigned long	index;
+	unsigned long	dst_len;
 
-	if (dst == 0 || src == 0)
+	if (dst == 0 && src == 0)
 		return (0);
 	index = 0;
 	dst_len = ft_strlen(dst);

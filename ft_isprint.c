@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:18:45 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/25 12:39:13 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/11 16:10:51 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	if (c > 0x1f && c < 0x7f)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }
