@@ -6,7 +6,7 @@
 #    By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/09 03:34:21 by bhildebr          #+#    #+#              #
-#    Updated: 2023/08/09 03:45:53 by bhildebr         ###   ########.fr        #
+#    Updated: 2023/08/11 18:00:36 by bhildebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ DEPENDS = $(patsubst %,%.d,$(FUNCTIONS))
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
 
 -include $(DEPENDS)
 
