@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-
 static int	get_number_of_words(char const *s, char c)
 {
 	int	i;
@@ -39,10 +36,10 @@ static int	get_number_of_words(char const *s, char c)
 
 static void	get_words_logic(char const *s, char c, char ***words)
 {
-	unsigned long	i;
-	unsigned long	start;
-	unsigned long	end;
-	unsigned long	index_of_current_word;
+	size_t	i;
+	size_t	start;
+	size_t	end;
+	size_t	index_of_current_word;
 
 	i = 0;
 	index_of_current_word = 0;

@@ -6,11 +6,9 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 18:39:48 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 16:07:55 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:05:31 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// checks for a digit (0 through 9).
 
 int	ft_isdigit(int c)
 {

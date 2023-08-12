@@ -12,11 +12,9 @@
 
 #include "libft.h"
 
-#include <stdlib.h>
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned long	s_len;
+	size_t	s_len;
 
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;

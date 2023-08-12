@@ -12,13 +12,11 @@
 
 #include "libft.h"
 
-#include <stdlib.h>
-
-char	*ft_substr(char const *s, unsigned int start, unsigned long len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	unsigned long	i;
-	unsigned long	s_len;
+	char	*substr;
+	size_t	i;
+	size_t	s_len;
 
 	i = 0;
 	s_len = ft_strlen(s);

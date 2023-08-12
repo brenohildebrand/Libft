@@ -6,18 +6,15 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:55:40 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 17:14:53 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:06:16 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// The strlcpy() function copies up to size - 1 characters from the 
-// NUL-terminated string src to dst, NUL-terminating the result.
-
-unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned long	index;
+	size_t	index;
 
 	if (size > 0)
 	{

@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include <stdlib.h>
-
 // number_of_characters - i - 1 is the last index of the string if i == 0
 static char	*get_digits(int n, int number_of_characters)
 {

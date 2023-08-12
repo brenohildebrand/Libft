@@ -6,12 +6,9 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 11:14:01 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/07/25 11:39:42 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:05:19 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// checks for an alphanumeric character; it is equivalent to (isalpha(c) || 
-// isdigit(c)).
 
 #include "libft.h"
 

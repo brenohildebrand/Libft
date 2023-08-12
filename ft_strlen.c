@@ -6,13 +6,15 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 16:45:01 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 16:20:47 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 16:34:12 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	unsigned long	len;
+	size_t	len;
 
 	len = 0;
 	while (*(s + len))

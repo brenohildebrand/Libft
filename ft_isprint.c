@@ -6,11 +6,9 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:18:45 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 16:10:51 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:05:35 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// checks for any printable character including space.
 
 int	ft_isprint(int c)
 {

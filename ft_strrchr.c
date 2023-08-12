@@ -6,12 +6,9 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:49:34 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 17:24:47 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:06:38 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// The strrchr() function returns a pointer to the last occurrence of the 
-// character c in the string s.
 
 #include "libft.h"
 

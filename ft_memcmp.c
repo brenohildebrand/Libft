@@ -6,16 +6,15 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 12:28:49 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 16:32:52 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:05:47 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The memcmp() function compares the first n bytes (each interpreted as 
-// unsigned char) of the memory areas s1 and s2.
+#include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned long n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned long	index;
+	size_t			index;
 	unsigned char	*str1;
 	unsigned char	*str2;
 

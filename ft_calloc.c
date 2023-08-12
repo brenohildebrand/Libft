@@ -6,18 +6,16 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 14:55:03 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/12 14:27:25 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 16:32:54 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-
-void	*ft_calloc(unsigned long nmemb, unsigned long size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void			*ptr;
-	unsigned long	total;
+	void	*ptr;
+	size_t	total;
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));

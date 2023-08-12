@@ -6,20 +6,16 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:56:35 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/11 17:12:17 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/08/12 18:06:19 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// The strlcat() function appends the NUL-terminated string src to the end of 
-// dst.  It will append at most size - strlen(dst) - 1 bytes, NUL-terminating 
-// the result.
-
-unsigned long	ft_strlcat(char *dst, const char *src, unsigned long size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned long	index;
-	unsigned long	dst_len;
+	size_t	index;
+	size_t	dst_len;
 
 	if (dst == 0 && src == 0)
 		return (0);
