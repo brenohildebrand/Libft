@@ -14,63 +14,63 @@
 
 #include <stdlib.h>
 
-static void	get_string_from_number(int n, char **s, int len)
+// number_of_characters - i - 1 is the last index of the string if i == 0
+static char	*get_digits(int n, int number_of_characters)
 {
-	int	i;
+	int		i;
+	char	*s;
+	int		number_of_digits;
 
-	i = 0;
-	if (n < 0)
-	{
-		(*s)[0] = '-';
-		n *= -1;
-		while (i < len - 1)
-		{
-			(*s)[len - i - 1] = (n % 10) + '0';
-			n /= 10;
-			i++;
-		}
-	}
+	s = ft_calloc(number_of_characters + 1, sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	s[number_of_characters] = '\0';
+	if (n >= 0)
+		number_of_digits = number_of_characters;
 	else
 	{
-		while (i < len)
-		{
-			(*s)[len - i - 1] = (n % 10) + '0';
-			n /= 10;
-			i++;
-		}
+		s[0] = '-';
+		n *= -1;
+		number_of_digits = number_of_characters - 1;
 	}
-	(*s)[len] = '\0';
+	i = 0;
+	while (i < number_of_digits)
+	{
+		s[number_of_characters - i - 1] = (n % 10) + '0';
+		n /= 10;
+		i++;
+	}
+	return (s);
 }
 
-static int	get_number_of_digits_of_int(int n)
+// number_of_characters is initialized to 1 in order to count the last digit
+// the while loop does not count
+static int	get_number_of_characters(int n)
 {
-	int	count;
+	int	number_of_characters;
 
-	count = 1;
+	number_of_characters = 1;
 	if (n < 0)
 	{
-		count++;
+		number_of_characters++;
 		n *= -1;
 	}
 	while (n >= 10)
 	{
 		n /= 10;
-		count++;
+		number_of_characters++;
 	}
-	return (count);
+	return (number_of_characters);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*s;
+	int		number_of_characters;
 
 	if (n == -2147483648)
-	{
 		return (ft_strdup("-2147483648"));
-	}
-	s = (char *)malloc((get_number_of_digits_of_int(n) + 1) * sizeof(char));
-	if (s == NULL)
-		return (NULL);
-	get_string_from_number(n, &s, get_number_of_digits_of_int(n));
+	number_of_characters = get_number_of_characters(n);
+	s = get_digits(n, number_of_characters);
 	return (s);
 }
