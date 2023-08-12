@@ -15,37 +15,37 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-static int	get_number_of_tokens(char const *s, char c)
+static int	get_number_of_words(char const *s, char c)
 {
 	int	i;
-	int	count;
+	int	number_of_words;
 
 	i = 0;
-	count = 0;
+	number_of_words = 0;
 	while (1)
 	{
 		while (s[i] && s[i] == c)
 			i++;
 		if (s[i] == '\0')
 			break ;
-		count++;
+		number_of_words++;
 		while (s[i] && s[i] != c)
 			i++;
 		if (s[i] == '\0')
 			break ;
 	}
-	return (count);
+	return (number_of_words);
 }
 
-static void	get_tokens_logic(char const *s, char c, char ***tokens)
+static void	get_words_logic(char const *s, char c, char ***words)
 {
 	unsigned long	i;
-	unsigned long	count;
 	unsigned long	start;
 	unsigned long	end;
+	unsigned long	index_of_current_word;
 
 	i = 0;
-	count = 0;
+	index_of_current_word = 0;
 	while (1)
 	{
 		while (s[i] && s[i] == c)
@@ -56,25 +56,31 @@ static void	get_tokens_logic(char const *s, char c, char ***tokens)
 		while (s[i] && s[i] != c)
 			i++;
 		end = i - 1;
-		(*tokens)[count++] = ft_substr(s, start, end - start + 1);
+		(*words)[index_of_current_word] = ft_substr(s, start, end - start + 1);
+		index_of_current_word = index_of_current_word + 1;
 		if (s[i] == '\0')
 			break ;
 	}
-	(*tokens)[count] = 0;
+	(*words)[index_of_current_word] = 0;
 }
 
-static char	**get_tokens(char const *s, char c, int number_of_tokens)
+static char	**get_words(char const *s, char c, int number_of_words)
 {
-	char	**tokens;
+	char	**words;
 
-	tokens = ft_calloc(number_of_tokens + 1, sizeof(char *));
-	if (tokens == 0)
+	words = ft_calloc(number_of_words + 1, sizeof(char *));
+	if (words == 0)
 		return (0);
-	get_tokens_logic(s, c, &tokens);
-	return (tokens);
+	get_words_logic(s, c, &words);
+	return (words);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	return (get_tokens(s, c, get_number_of_tokens(s, c)));
+	char	**words;
+	int		number_of_words;
+
+	number_of_words = get_number_of_words(s, c);
+	words = get_words(s, c, number_of_words);
+	return (words);
 }
