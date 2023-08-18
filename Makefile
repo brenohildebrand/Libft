@@ -29,7 +29,7 @@ DEPENDS = $(patsubst %,%.d,$(FUNCTIONS))
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	ar rcs $(NAME) $?
 
 -include $(DEPENDS)
 
