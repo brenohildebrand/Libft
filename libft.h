@@ -6,7 +6,7 @@
 /*   By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 18:16:23 by bhildebr          #+#    #+#             */
-/*   Updated: 2023/08/17 08:30:06 by bhildebr         ###   ########.fr       */
+/*   Updated: 2023/09/12 00:19:40 by bhildebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
+char			*ft_itoa_base(int value, char *base);
 
 #endif   
