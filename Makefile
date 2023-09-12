@@ -6,7 +6,7 @@
 #    By: bhildebr <bhildebr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/09 03:34:21 by bhildebr          #+#    #+#              #
-#    Updated: 2023/08/11 18:00:36 by bhildebr         ###   ########.fr        #
+#    Updated: 2023/09/12 15:03:35 by bhildebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ FUNCTIONS = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
     ft_strlcat ft_toupper ft_tolower ft_strchr ft_strrchr ft_strncmp \
     ft_memchr ft_memcmp ft_strnstr ft_atoi ft_calloc ft_strdup \
 	ft_substr ft_strjoin ft_strtrim ft_split ft_itoa ft_strmapi \
-	ft_striteri ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd
+	ft_striteri ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd \
+	ft_itoa_base
 
 SOURCES = $(patsubst %,%.c,$(FUNCTIONS))
 OBJECTS = $(patsubst %,%.o,$(FUNCTIONS))
